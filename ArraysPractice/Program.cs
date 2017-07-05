@@ -58,6 +58,34 @@ namespace ArraysPractice
             Console.WriteLine("The age of the student in the first seat is " + ageofStudentsInClass[0]); //To display input with concatenation
             //Create new string variable and set equal to int at index of 0, convert to string
             string firstIndex = ageofStudentsInClass[0].ToString();
+
+            string[] restaurantsInMall = { "Subway", "Saki", "Dunkin Donuts", "Red Lobster", "Chick-fil-A" };
+            Console.WriteLine(restaurantsInMall.Length);
+
+            //To practice .Length, create a char array of letters in middle name and print number of chars
+            char[] middleName = { 'c', 'a', 'r', 'l' };
+            Console.WriteLine(middleName.Length);
+
+            //Declare and intialize a string array
+            //Using the Length property, print the second to last element
+            int numRest = restaurantsInMall.Length;
+            Console.WriteLine(restaurantsInMall[numRest - 2]);
+
+            Console.WriteLine(restaurantsInMall[restaurantsInMall.Length - 2]);
+
+            //IndexOf
+            int[] bestYearsEver = { 1985, 1999, 1991, 2000, 1985 };
+            Console.WriteLine(Array.IndexOf(bestYearsEver, 1985));
+            //LastIndexOf
+            Console.WriteLine(Array.LastIndexOf(bestYearsEver, 1985));
+
+            //Reverse Method
+            int[] palindromeNumbers = { 1, 2, 3, 4, 5, 6, 7 };
+            Console.WriteLine(palindromeNumbers[0]); //will return 1
+            Array.Reverse(palindromeNumbers);
+            Console.WriteLine(palindromeNumbers[0]);  //will return 7
+            
+
         }
     }
 }
