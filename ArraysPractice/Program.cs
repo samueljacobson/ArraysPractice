@@ -36,8 +36,28 @@ namespace ArraysPractice
             double[] gpa = { 2.0, 2.5, 2.7, 3.0, 3.2, 3.5, 3.8, 4.0 };
             //Array of first letter of 4 classmastes' names, print all on same line
             char[] firstLetter = { 'C', 'M', 'J', 'S' };
-            Console.WriteLine(firstLetter[0] + firstLetter[1] + firstLetter[2] + firstLetter[3]);
-            Console.WriteLine("{0}, {1}, {2}, {3}", firstLetter[0], firstLetter[1], firstLetter[2], firstLetter[3]);
+            Console.WriteLine("\n{0}, {1}, {2}, {3}", firstLetter[0], firstLetter[1], firstLetter[2], firstLetter[3]);
+
+            //dataType[] nameOfArray = new dataType[#ofElements];
+            int[] numberOfSeats = new int[21];
+            string[] studentsInClass = new string[21];
+
+            //nameofArray[index] = Element;
+            studentsInClass[0] = "Jordan";
+
+            Console.WriteLine("Please enter in the name of the next student.");
+            studentsInClass[1] = Console.ReadLine();
+            Console.WriteLine("The student in the second seat is {0}.", studentsInClass[1]); //To display input with placeholder
+
+            //Ask user for input
+            Console.WriteLine("Please enter the age of the person in the first seat.");
+            //Create new int array with 21 spots
+            int[] ageofStudentsInClass = new int[21];
+            //Assign value of int at index 0 to user's input converted to int
+            ageofStudentsInClass[0] = int.Parse(Console.ReadLine());
+            Console.WriteLine("The age of the student in the first seat is " + ageofStudentsInClass[0]); //To display input with concatenation
+            //Create new string variable and set equal to int at index of 0, convert to string
+            string firstIndex = ageofStudentsInClass[0].ToString();
         }
     }
 }
